@@ -1,5 +1,9 @@
 grammar MiniLanguage;
 //Detail
+stmt_sequence
+    :   stmt_sequence statement
+    |   statement
+    ;
 statement
     :   if_stmt
     |   repeat_stmt
@@ -9,12 +13,11 @@ statement
     ;
 
 if_stmt
-    :   If exp Then stmt_sequence End Semi
-    |   If exp Then stmt_sequence Else stmt_sequence End Semi
+    :   If exp Then stmt_sequence (Else stmt_sequence)? EOF?
     ;
 
 repeat_stmt
-    :   Repeat stmt_sequence Until exp Semi
+    :   Repeat stmt_sequence Until exp
     ;
 
 assign_stmt
@@ -56,11 +59,6 @@ factor
 //Main
 progarm
     :   stmt_sequence? EOF
-    ;
-
-stmt_sequence
-    :   stmt_sequence statement
-    |   statement
     ;
 
 //Keyword
