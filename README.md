@@ -5,4 +5,6 @@ MiniLanguage parser in antlr4
 
 * 到[ANTLR官网](http://www.antlr.org/)下载antlr-runtime-4.5.3.jar并导入项目.
 
+* 到[这里](http://www.dom4j.org/dom4j-1.6.1/)下载dom4j-1.6.1.jar并导入项目.
+
 * 如果Project Files处没有任何文件, 请手动导入MiniLanguageParser.iml(File -> Project Structure -> Modules -> + 选择MiniLanguageParser.iml).

@@ -13,11 +13,11 @@ statement
     ;
 
 if_stmt
-    :   If exp Then stmt_sequence (Else stmt_sequence)? EOF?
+    :   If LeftParen exp RightParen stmt_sequence (Else stmt_sequence)? EOF?
     ;
 
 repeat_stmt
-    :   Repeat stmt_sequence Until exp
+    :   Repeat stmt_sequence Until LeftParen exp RightParen
     ;
 
 assign_stmt
@@ -63,8 +63,6 @@ progarm
 
 //Keyword
 If : 'if';
-Then : 'then';
-End : ' end';
 Else : 'else';
 Read : 'read';
 Write : 'write';
@@ -91,6 +89,9 @@ Identifier
     ;
 
 DecimalConstant
+    : Minus? PositiveDecimalConstant
+    ;
+PositiveDecimalConstant
     :   NonzeroDigit Digit+
     |   Digit
     ;
