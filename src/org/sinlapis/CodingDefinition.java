@@ -50,6 +50,8 @@ class CodingDefinition {
             put("/", "Div");
             put("(", "LeftParen");
             put(")", "RightParen");
+
+            put("<EOF>", "EOF");
         }
     };
 

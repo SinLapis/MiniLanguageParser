@@ -11,8 +11,6 @@ import org.sinlapis.gen.MiniLanguageLexer;
 import org.sinlapis.gen.MiniLanguageParser;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by SinLapis
