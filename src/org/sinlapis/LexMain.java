@@ -26,7 +26,9 @@ public class LexMain {
     }
     public static void main(String[] args){
         try {
-            InputStream is = new FileInputStream("test.txt");
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String fileName = br.readLine();
+            InputStream is = new FileInputStream(fileName);
             ANTLRInputStream input = new ANTLRInputStream(is);
             OnlyLexLexer onlyLexLexer = new OnlyLexLexer(input);
             CommonTokenStream commonTokenStream = new CommonTokenStream(onlyLexLexer);

@@ -1,91 +1,69 @@
 package org.sinlapis;
 
-import org.antlr.v4.runtime.Token;
-import org.antlr.v4.runtime.tree.ErrorNode;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.RuleNode;
-import org.antlr.v4.runtime.tree.TerminalNode;
 import org.sinlapis.gen.MiniLanguageBaseVisitor;
 import org.sinlapis.gen.MiniLanguageParser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by SinLapis
  */
-public class TestVisitor extends MiniLanguageBaseVisitor<Integer> {
-    private List<Word> words = new ArrayList<Word>();
-    private List<String> symbols = new ArrayList<String>();
-    private List<Integer> constants = new ArrayList<Integer>();
-    private int symbolNum = 0;
-    private int constantNum = 0;
+public class ParserVisitor extends MiniLanguageBaseVisitor<Integer> {
     @Override
     public Integer visitStmt_sequence(MiniLanguageParser.Stmt_sequenceContext ctx) {
-        return null;
+        return super.visitStmt_sequence(ctx);
     }
 
     @Override
     public Integer visitStatement(MiniLanguageParser.StatementContext ctx) {
-        return null;
+        return super.visitStatement(ctx);
     }
 
     @Override
     public Integer visitIf_stmt(MiniLanguageParser.If_stmtContext ctx) {
-        return null;
+        return super.visitIf_stmt(ctx);
     }
 
     @Override
     public Integer visitRepeat_stmt(MiniLanguageParser.Repeat_stmtContext ctx) {
-        return null;
+        return super.visitRepeat_stmt(ctx);
     }
 
     @Override
     public Integer visitAssign_stmt(MiniLanguageParser.Assign_stmtContext ctx) {
-
-        words.add(new Word(CodingDefination.ASSIGN, -1));
-        visit(ctx.exp());
-
-        return null;
+        return super.visitAssign_stmt(ctx);
     }
 
     @Override
     public Integer visitRead_stmt(MiniLanguageParser.Read_stmtContext ctx) {
-        return null;
+        return super.visitRead_stmt(ctx);
     }
 
     @Override
     public Integer visitWrite_stmt(MiniLanguageParser.Write_stmtContext ctx) {
-        return null;
+        return super.visitWrite_stmt(ctx);
     }
 
     @Override
     public Integer visitExp(MiniLanguageParser.ExpContext ctx) {
-        return null;
+        return super.visitExp(ctx);
     }
 
     @Override
     public Integer visitSimple_exp(MiniLanguageParser.Simple_expContext ctx) {
-        return null;
+        return super.visitSimple_exp(ctx);
     }
 
     @Override
     public Integer visitTerm(MiniLanguageParser.TermContext ctx) {
-        return null;
+        return super.visitTerm(ctx);
     }
 
     @Override
     public Integer visitFactor(MiniLanguageParser.FactorContext ctx) {
-        return null;
+        return super.visitFactor(ctx);
     }
 
     @Override
     public Integer visitProgarm(MiniLanguageParser.ProgarmContext ctx) {
-        return null;
-    }
-
-    @Override
-    public Integer visitErrorNode(ErrorNode errorNode) {
-        return null;
+        return super.visitProgarm(ctx);
     }
 }
